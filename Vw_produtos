@@ -1,0 +1,6 @@
+
+
+
+CREATE VIEW vw_DimProduct AS  
+SELECT *  
+FROM DimProduct;
