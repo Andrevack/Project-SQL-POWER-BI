@@ -1,0 +1,12 @@
+
+
+Create View vw_Totalvendascanal As  
+Select SUM(SalesQuantity) As Total_vendas,  
+ channelKey As Canal_venda,  
+ CalendarYear  
+from FactSales  
+inner join DimDate  
+ on  
+ DimDate.Datekey= FactSales.DateKey  
+Where CalendarYear  IN (2008,2009)  
+Group by channelKey, CalendarYear;
