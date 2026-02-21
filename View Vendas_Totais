@@ -1,0 +1,11 @@
+
+
+CREATE VIEW vwVendasTotais AS  
+select   
+ ProductName,  
+ SUM(SalesQuantity)AS 'Quantidade total'  
+from  
+ DimProduct  
+Inner Join FactSales  
+on  FactSales.ProductKey= DimProduct.ProductKey  
+Group by ProductName
